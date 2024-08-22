@@ -34,17 +34,20 @@
             label1 = new Label();
             label2 = new Label();
             dataUsers = new DataGridView();
+            button2 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataUsers).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(68, 139);
+            button1.BackColor = Color.SpringGreen;
+            button1.Location = new Point(104, 139);
             button1.Name = "button1";
-            button1.Size = new Size(100, 41);
+            button1.Size = new Size(77, 41);
             button1.TabIndex = 0;
             button1.Text = "ثبت";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // txtName
@@ -86,6 +89,29 @@
             dataUsers.Name = "dataUsers";
             dataUsers.Size = new Size(337, 340);
             dataUsers.TabIndex = 5;
+            dataUsers.CellEnter += dataUsers_CellEnter;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.DeepPink;
+            button2.Location = new Point(187, 139);
+            button2.Name = "button2";
+            button2.Size = new Size(81, 41);
+            button2.TabIndex = 6;
+            button2.Text = "حذف";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.SlateBlue;
+            button3.Location = new Point(12, 139);
+            button3.Name = "button3";
+            button3.Size = new Size(77, 41);
+            button3.TabIndex = 7;
+            button3.Text = "ویرایش";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // MainForm
             // 
@@ -93,6 +119,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
             ClientSize = new Size(650, 384);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(dataUsers);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -116,5 +144,7 @@
         private Label label1;
         private Label label2;
         private DataGridView dataUsers;
+        private Button button2;
+        private Button button3;
     }
 }
