@@ -1,6 +1,5 @@
 ﻿using DataLayer;
 using DataLayer.Entities.Account;
-
 namespace WinFormsApp.Forms;
 public partial class MainForm : Form
 {
@@ -21,6 +20,16 @@ public partial class MainForm : Form
         user.Name = txtName.Text;
         user.PhonNumber = TxtPhone.Text;
         user.CreateDate = DateTime.Now;
+
+        if (txtName.Text != "")
+        {
+            var oldUser = _db.Users.FirstOrDefault(u => u.Name == txtName.Text);
+            if (oldUser != null)
+            {
+                MessageBox.Show("نام کاربر وجود دارد");
+                return;
+            }
+        }
 
         try
         {
@@ -66,6 +75,16 @@ public partial class MainForm : Form
         int id = Convert.ToInt32(dataUsers.CurrentRow.Cells["Id"].Value.ToString());
 
         var user = _db.Users.FirstOrDefault(u => u.Id == id);
+
+        if (txtName.Text != "")
+        {
+            var oldUser = _db.Users.FirstOrDefault(u => u.Name == txtName.Text && u.Id != user.Id);
+            if (oldUser != null)
+            {
+                MessageBox.Show("نام کاربر وجود دارد");
+                return;
+            }
+        }
 
         if (user != null)
         {
