@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using DataLayer.Entities.Products;
+
 namespace DataLayer.Entities.Account;
 public class User 
 {
@@ -12,4 +14,8 @@ public class User
 
     public DateTime CreateDate { get; set; }
 
+    // Relations
+
+    public ICollection<Product> Products { get; set; }
+    
 }

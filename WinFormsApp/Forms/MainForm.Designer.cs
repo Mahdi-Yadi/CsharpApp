@@ -28,123 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            txtName = new TextBox();
-            TxtPhone = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            pictureBox1 = new PictureBox();
             label1 = new Label();
+            pictureBox2 = new PictureBox();
             label2 = new Label();
-            dataUsers = new DataGridView();
-            button2 = new Button();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataUsers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // pictureBox1
             // 
-            button1.BackColor = Color.SpringGreen;
-            button1.Location = new Point(104, 139);
-            button1.Name = "button1";
-            button1.Size = new Size(77, 41);
-            button1.TabIndex = 0;
-            button1.Text = "ثبت";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // txtName
-            // 
-            txtName.Location = new Point(39, 45);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(155, 23);
-            txtName.TabIndex = 1;
-            // 
-            // TxtPhone
-            // 
-            TxtPhone.Location = new Point(39, 89);
-            TxtPhone.Name = "TxtPhone";
-            TxtPhone.Size = new Size(155, 23);
-            TxtPhone.TabIndex = 2;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(72, 70);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(232, 50);
+            label1.Location = new Point(12, 98);
             label1.Name = "label1";
-            label1.Size = new Size(21, 15);
-            label1.TabIndex = 3;
-            label1.Text = "نام";
+            label1.Size = new Size(72, 15);
+            label1.TabIndex = 1;
+            label1.Text = "لیست کاربران";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(104, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(57, 70);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(232, 89);
+            label2.Location = new Point(104, 98);
             label2.Name = "label2";
-            label2.Size = new Size(29, 15);
-            label2.TabIndex = 4;
-            label2.Text = "تلفن";
-            // 
-            // dataUsers
-            // 
-            dataUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataUsers.Location = new Point(301, 21);
-            dataUsers.Name = "dataUsers";
-            dataUsers.Size = new Size(337, 340);
-            dataUsers.TabIndex = 5;
-            dataUsers.CellEnter += dataUsers_CellEnter;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.DeepPink;
-            button2.Location = new Point(187, 139);
-            button2.Name = "button2";
-            button2.Size = new Size(81, 41);
-            button2.TabIndex = 6;
-            button2.Text = "حذف";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.SlateBlue;
-            button3.Location = new Point(12, 139);
-            button3.Name = "button3";
-            button3.Size = new Size(77, 41);
-            button3.TabIndex = 7;
-            button3.Text = "ویرایش";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            label2.Size = new Size(57, 15);
+            label2.TabIndex = 3;
+            label2.Text = "محصولات";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Azure;
-            ClientSize = new Size(650, 384);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(dataUsers);
+            ClientSize = new Size(858, 498);
             Controls.Add(label2);
+            Controls.Add(pictureBox2);
             Controls.Add(label1);
-            Controls.Add(TxtPhone);
-            Controls.Add(txtName);
-            Controls.Add(button1);
+            Controls.Add(pictureBox1);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
-            Load += MainForm_Load;
-            ((System.ComponentModel.ISupportInitialize)dataUsers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private TextBox txtName;
-        private TextBox TxtPhone;
+        private PictureBox pictureBox1;
         private Label label1;
+        private PictureBox pictureBox2;
         private Label label2;
-        private DataGridView dataUsers;
-        private Button button2;
-        private Button button3;
     }
 }
