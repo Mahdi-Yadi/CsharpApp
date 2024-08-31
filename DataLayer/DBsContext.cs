@@ -1,4 +1,5 @@
 ﻿using DataLayer.Entities.Account;
+using DataLayer.Entities.Products;
 using Microsoft.EntityFrameworkCore;
 namespace DataLayer;
 public class DBsContext : DbContext
@@ -12,6 +13,12 @@ public class DBsContext : DbContext
     #region Account
 
     public DbSet<User> Users { get; set; }
+
+    #endregion
+
+    #region Product
+
+    public DbSet<Product> Products { get; set; }
 
     #endregion
 

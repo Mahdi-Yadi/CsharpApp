@@ -20,6 +20,7 @@ public partial class Login : Form
             if (user != null)
             {
                 IsTrue = true;
+                Module.dataModule.UserId = user.Id;
                 this.Close();
             }
             else

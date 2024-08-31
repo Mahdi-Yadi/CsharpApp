@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace WinFormsApp.Forms
+﻿using WinFormsApp.Forms.Products;
+namespace WinFormsApp.Forms;
+public partial class ProductsList : Form
 {
-    public partial class ProductsList : Form
+    public ProductsList()
     {
-        public ProductsList()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
+
+    private void btnadd_Click(object sender, EventArgs e)
+    {
+        AddProductFRM add = new AddProductFRM();
+        add.ShowDialog();
+    }
+
 }

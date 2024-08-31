@@ -69,6 +69,7 @@
             Controls.Add(button1);
             Controls.Add(txtname);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             FormClosing += Login_FormClosing;
             ResumeLayout(false);
