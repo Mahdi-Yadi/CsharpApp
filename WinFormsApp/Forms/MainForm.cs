@@ -1,8 +1,9 @@
-﻿using WinFormsApp.Module;
-
-namespace WinFormsApp.Forms;
+﻿namespace WinFormsApp.Forms;
 public partial class MainForm : Form
 {
+
+    private bool isLoged = false;
+
     public MainForm()
     {
         InitializeComponent();
@@ -19,4 +20,28 @@ public partial class MainForm : Form
         ProductsList productslist = new ProductsList();
         productslist.ShowDialog();
     }
+
+    private void MainForm_Load(object sender, EventArgs e)
+    {
+        isLoged = false;
+
+        if (isLoged == false)
+        {
+            Login login = new Login();
+
+            login.ShowDialog();
+
+            if (login.IsTrue == true)
+            {
+                isLoged = true;
+                login.Close();
+            }
+            else
+            {
+                MessageBox.Show("نام کاربری را وارد کنید");
+            }
+        }
+
+    }
+
 }
