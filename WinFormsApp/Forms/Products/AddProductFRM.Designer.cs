@@ -95,11 +95,10 @@
         }
 
         #endregion
-
-        private Button btnadd;
         private Label txtSearch;
-        private TextBox txtName;
         private Label label1;
-        private TextBox txtPrice;
+        public TextBox txtName;
+        public TextBox txtPrice;
+        public Button btnadd;
     }
 }

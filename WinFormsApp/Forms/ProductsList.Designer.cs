@@ -72,6 +72,7 @@
             button1.TabIndex = 3;
             button1.Text = "ثبت";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btnadd
             // 
@@ -93,6 +94,7 @@
             btnedit.TabIndex = 5;
             btnedit.Text = "ویرایش محصول ";
             btnedit.UseVisualStyleBackColor = false;
+            btnedit.Click += btnedit_Click;
             // 
             // btndelete
             // 
@@ -103,6 +105,7 @@
             btndelete.TabIndex = 6;
             btndelete.Text = "حذف محصول ";
             btndelete.UseVisualStyleBackColor = false;
+            btndelete.Click += btndelete_Click;
             // 
             // btndetail
             // 
@@ -113,6 +116,7 @@
             btndetail.TabIndex = 7;
             btndetail.Text = "جزییات محصول ";
             btndetail.UseVisualStyleBackColor = false;
+            btndetail.Click += btndetail_Click;
             // 
             // ProductsList
             // 
@@ -130,6 +134,7 @@
             Name = "ProductsList";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "محصولات";
+            Load += ProductsList_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridProducts).EndInit();
             ResumeLayout(false);
             PerformLayout();
