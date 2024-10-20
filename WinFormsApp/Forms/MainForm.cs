@@ -1,4 +1,6 @@
-﻿namespace WinFormsApp.Forms;
+﻿using WinFormsApp.Forms.Orders;
+
+namespace WinFormsApp.Forms;
 public partial class MainForm : Form
 {
 
@@ -44,4 +46,10 @@ public partial class MainForm : Form
 
     }
 
+    private void pictureBox3_Click(object sender, EventArgs e)
+    {
+        OrdersList orderslist = new OrdersList();
+
+        orderslist.ShowDialog();
+    }
 }

@@ -36,6 +36,7 @@
             btnedit = new Button();
             btndelete = new Button();
             btndetail = new Button();
+            BtnAddorder = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridProducts).BeginInit();
             SuspendLayout();
             // 
@@ -118,11 +119,23 @@
             btndetail.UseVisualStyleBackColor = false;
             btndetail.Click += btndetail_Click;
             // 
+            // BtnAddorder
+            // 
+            BtnAddorder.BackColor = Color.Lime;
+            BtnAddorder.Location = new Point(123, 300);
+            BtnAddorder.Name = "BtnAddorder";
+            BtnAddorder.Size = new Size(110, 41);
+            BtnAddorder.TabIndex = 8;
+            BtnAddorder.Text = "افزودن به فاکتور";
+            BtnAddorder.UseVisualStyleBackColor = false;
+            BtnAddorder.Click += BtnAddorder_Click;
+            // 
             // ProductsList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(708, 360);
+            Controls.Add(BtnAddorder);
             Controls.Add(btndetail);
             Controls.Add(btndelete);
             Controls.Add(btnedit);
@@ -150,5 +163,6 @@
         private Button btnedit;
         private Button btndelete;
         private Button btndetail;
+        private Button BtnAddorder;
     }
 }

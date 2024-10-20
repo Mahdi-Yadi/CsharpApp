@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using DataLayer.Entities.Products;
-
 namespace DataLayer.Entities.Account;
 public class User 
 {
