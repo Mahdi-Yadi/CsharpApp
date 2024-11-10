@@ -37,6 +37,11 @@ public partial class ProductsList : Form
 
     private void btnedit_Click(object sender, EventArgs e)
     {
+        if (dataGridProducts.SelectedRows.Count == 0)
+        {
+            MessageBox.Show("لطفا محصولی را انتخاب نمایید.");
+            return;
+        }
         int id = Convert.ToInt32(dataGridProducts.CurrentRow.Cells["Id"].Value.ToString());
 
         var product = _ctx.Products.FirstOrDefault(p => p.Id == id);
@@ -59,6 +64,11 @@ public partial class ProductsList : Form
 
     private void btndelete_Click(object sender, EventArgs e)
     {
+        if (dataGridProducts.SelectedRows.Count == 0)
+        {
+            MessageBox.Show("لطفا محصولی را انتخاب نمایید.");
+            return;
+        }
         int id = Convert.ToInt32(dataGridProducts.CurrentRow.Cells["Id"].Value.ToString());
 
         var product = _ctx.Products.FirstOrDefault(p => p.Id == id);
@@ -86,6 +96,11 @@ public partial class ProductsList : Form
 
     private void btndetail_Click(object sender, EventArgs e)
     {
+        if (dataGridProducts.SelectedRows.Count == 0)
+        {
+            MessageBox.Show("لطفا محصولی را انتخاب نمایید.");
+            return;
+        }
         int id = Convert.ToInt32(dataGridProducts.CurrentRow.Cells["Id"].Value.ToString());
 
         var product = _ctx.Products.FirstOrDefault(p => p.Id == id);
@@ -107,6 +122,11 @@ public partial class ProductsList : Form
 
     private void BtnAddorder_Click(object sender, EventArgs e)
     {
+        if (dataGridProducts.SelectedRows.Count == 0)
+        {
+            MessageBox.Show("لطفا محصولی را انتخاب نمایید.");
+            return;
+        }
         int id = Convert.ToInt32(dataGridProducts.CurrentRow.Cells["Id"].Value.ToString());
 
         var product = _ctx.Products.FirstOrDefault(p => p.Id == id);
