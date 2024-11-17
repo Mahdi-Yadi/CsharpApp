@@ -42,4 +42,13 @@ public partial class Login : Form
         }
     }
 
+    private void pictureBox2_Click(object sender, EventArgs e)
+    {
+        Application.Exit();
+    }
+
+    private void pictureBox3_Click(object sender, EventArgs e)
+    {
+        WindowState = FormWindowState.Minimized;
+    }
 }
