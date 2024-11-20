@@ -1,20 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DataLayer;
 
-namespace WinFormsApp.Forms.Orders
+namespace WinFormsApp.Forms.Orders;
+public partial class OrdersList : Form
 {
-    public partial class OrdersList : Form
+
+    private readonly DBsContext dbContext = new DBsContext();
+
+    public OrdersList()
     {
-        public OrdersList()
+        InitializeComponent();
+    }
+
+    private void OrdersList_Load(object sender, EventArgs e)
+    {
+        try
         {
-            InitializeComponent();
+            dataGridOrders.DataSource = dbContext.Orders.ToList();
+        }
+        catch (Exception)
+        {
+            MessageBox.Show("بانک اطلاعاتی در دسترس نیست!");
+            throw;
         }
     }
 }

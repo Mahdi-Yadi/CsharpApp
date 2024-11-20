@@ -42,6 +42,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
@@ -62,6 +63,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.Cursor = Cursors.Hand;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(104, 12);
             pictureBox2.Name = "pictureBox2";
@@ -91,6 +93,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Cursor = Cursors.Hand;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(187, 12);
             pictureBox3.Name = "pictureBox3";

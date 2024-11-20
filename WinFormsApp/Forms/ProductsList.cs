@@ -23,7 +23,15 @@ public partial class ProductsList : Form
 
     private void ProductsList_Load(object sender, EventArgs e)
     {
-        dataGridProducts.DataSource = _ctx.Products.ToList();
+        try
+        {
+            dataGridProducts.DataSource = _ctx.Products.ToList();
+        }
+        catch (Exception)
+        {
+            MessageBox.Show("بانک اطلاعاتی در دسترس نیست!");
+            throw;
+        }
     }
 
     private void button1_Click(object sender, EventArgs e)

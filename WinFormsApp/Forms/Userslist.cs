@@ -1,5 +1,6 @@
 ﻿using DataLayer;
 using DataLayer.Entities.Account;
+using System.Windows.Forms;
 namespace WinFormsApp.Forms;
 public partial class Userslist : Form
 {
@@ -51,7 +52,16 @@ public partial class Userslist : Form
 
     private void MainForm_Load(object sender, EventArgs e)
     {
-        dataUsers.DataSource = _db.Users.ToList();
+        try
+        {
+            dataUsers.DataSource = _db.Users.ToList();
+        }
+        catch (Exception)
+        {
+            this.Close();
+            MessageBox.Show("بانک اطلاعاتی در دسترس نیست!");
+            throw;
+        }
     }
 
     private void button2_Click(object sender, EventArgs e)

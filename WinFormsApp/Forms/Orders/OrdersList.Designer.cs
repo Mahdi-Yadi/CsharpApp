@@ -134,6 +134,7 @@
             Name = "OrdersList";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "OrdersList";
+            Load += OrdersList_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridOrders).EndInit();
             ResumeLayout(false);
             PerformLayout();

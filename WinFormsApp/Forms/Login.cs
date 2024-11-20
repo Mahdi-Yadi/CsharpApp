@@ -1,4 +1,6 @@
 ﻿using DataLayer;
+using WinFormsApp.Module;
+
 namespace WinFormsApp.Forms;
 public partial class Login : Form
 {
@@ -16,16 +18,24 @@ public partial class Login : Form
     {
         if (txtname.Text != "")
         {
-            var user = _db.Users.FirstOrDefault(u => u.Name == txtname.Text);
-            if (user != null)
+            try
             {
-                IsTrue = true;
-                Module.dataModule.UserId = user.Id;
-                this.Close();
+                var user = _db.Users.FirstOrDefault(u => u.Name == txtname.Text);
+                if (user != null)
+                {
+                    IsTrue = true;
+                    dataModule.UserId = user.Id;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("همچین کاربری یافت نشد!");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("همچین کاربری یافت نشد!");
+                MessageBox.Show("بانک اطلاعاتی در دسترس نیست!");
+                return;
             }
         }
         else
