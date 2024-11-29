@@ -11,6 +11,8 @@ public class Order
 
     public bool IsOpen { get; set; }
 
+    public bool IsPay { get; set; }
+
     public DateTime CreatedDate { get; set; }
 
     public ICollection<OrderDetail> OrderDetails { get; set; }

@@ -88,22 +88,26 @@
             // btn_pay
             // 
             btn_pay.BackColor = Color.LimeGreen;
+            btn_pay.Cursor = Cursors.Hand;
             btn_pay.Location = new Point(446, 288);
             btn_pay.Name = "btn_pay";
             btn_pay.Size = new Size(110, 41);
             btn_pay.TabIndex = 9;
             btn_pay.Text = "پرداخت فاکتور";
             btn_pay.UseVisualStyleBackColor = false;
+            btn_pay.Click += btn_pay_Click;
             // 
             // btn_delete
             // 
             btn_delete.BackColor = Color.Brown;
+            btn_delete.Cursor = Cursors.Hand;
             btn_delete.Location = new Point(330, 288);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(110, 41);
             btn_delete.TabIndex = 10;
             btn_delete.Text = "حذف فاکتور";
             btn_delete.UseVisualStyleBackColor = false;
+            btn_delete.Click += btn_delete_Click;
             // 
             // btn_editOrder
             // 
